@@ -7,9 +7,9 @@ pipeline {
                 git branch: 'main', credentialsId: 'f5cd3adf-115e-4102-8c1f-bdda2c7af8cc', url: 'https://github.com/merajalikhan/mk-databricks-repo'
             }
         }
-        stage('Terraform Init') {
+        stage('Terraform Init....') {
             steps {
-               sh 'terraform initialise...'
+               sh 'terraform initialise'
                //print("terraform initia")
             }
         }
