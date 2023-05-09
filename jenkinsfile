@@ -10,7 +10,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                sh 'terraform init'
-               print("terraform initia")
+               //print("terraform initia")
             }
         }
         stage('Terraform Plan') {
