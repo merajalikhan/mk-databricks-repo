@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'f5cd3adf-115e-4102-8c1f-bdda2c7af8cc', url: 'https://github.com/merajalikhan/mk-databricks-repo'
+            }
+        }
+        stage('Terraform Init') {
+            steps {
+               sh 'terraform init'
+               print("terraform initia")
+            }
+        }
+        stage('Terraform Plan') {
+            steps {
+               // sh 'terraform plan '
+               print("terraform plan...")
+               
+            }
+        }
+        stage('Terraform Apply') {
+            steps {
+               // sh 'terraform apply --auto-approve'
+               print("terraform apply...")
+               
+            }
+        }
+        
+    }
+}
